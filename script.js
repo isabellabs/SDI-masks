@@ -35,11 +35,10 @@ function setup() {
   var canvas = createCanvas(600, 450);
 
   savebtn = createButton('Start');
+  savebtn.class('btn btn-secondary btn-sm');
   savebtn.mousePressed(function() {
     classifier.classify(gotResults);
   });
-
-
 
   canvas.parent('video_holder');
 
@@ -53,9 +52,6 @@ function setup() {
   
   classifier = mobilenet.classification(video, videoReady);
 
- 
-  
- 
   
   //maskonButton = createButton('Mask On');
   //maskonButton.mousePressed(function() {
