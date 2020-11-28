@@ -35,7 +35,7 @@ function setup() {
   var canvas = createCanvas(600, 450);
 
   savebtn = createButton('Start');
-  savebtn.class('btn btn-secondary btn-sm');
+  savebtn.class('btn-start');
   savebtn.mousePressed(function() {
     classifier.classify(gotResults);
   });
