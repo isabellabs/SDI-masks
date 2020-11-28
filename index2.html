@@ -6,13 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>SDI-01 - Model Trainning</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
 	<script src="sketch.js"></script>
@@ -24,28 +27,32 @@
 
 	<style>
 		.bg-steel {
-		  	background-color: #5d001e;
+		  	background-color: #3B3858;
 			}
 
 		.site-header .navbar-nav .nav-link {
+			font-family: 'DM Sans', sans-serif;
 		  	color: #cbd5db;
 			}
 
 		.site-header .navbar-nav .nav-link:hover {
 		  	color: #ffffff;
+			font-family: 'DM Sans', sans-serif;
 			}
 
 		.site-header .navbar-nav .nav-link.active {
 		  	font-weight: 500;
+			font-family: 'DM Sans', sans-serif;
 			}
 
 		#body {			
-			background-color: #1a1a1d;
+			background-color: #fbfbfb;
 			margin:0;
 			padding:0;
 			overflow: hidden;
 
 		}
+
 		canvas {
 			margin:auto;
 		}
@@ -60,7 +67,7 @@
 	<header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="index.html">Face Mask Detection</a>
+          <a class="navbar-brand mr-4" href="index.html">Project name</a>
           <button class="navbar-toggler" type="button" data-toggle="colapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -83,5 +90,7 @@
 			</div>			
 		</div>			
 	</div>
+	<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_aibtg4s1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+	<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_d7zirht6.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
 </body>
 </html>
