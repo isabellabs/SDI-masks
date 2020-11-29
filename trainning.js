@@ -13,7 +13,7 @@ function videoReady() {
 }
 
 function setup() {
-  var cnv = createCanvas(600, 500);
+  var cnv = createCanvas(600, 450);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
@@ -37,22 +37,21 @@ function setup() {
     classifier.addImage('Mask Off');
   });
 
-
-  maskoffButton = createButton('Mask wrong');
-  maskoffButton.class('btn-start');
-  maskoffButton.mousePressed(function() {
+  maskWrongButton = createButton('Mask wrong');
+  maskWrongButton.class('btn-start');
+  maskWrongButton.mousePressed(function() {
     classifier.addImage('Mask wrong');
   });
 
-  trainbtn = createButton('Train');
-  trainbtn.class('btn-start');
-  trainbtn.mousePressed(function() {
+  trainButton = createButton('Train');
+  trainButton.class('btn-start');
+  trainButton.mousePressed(function() {
     classifier.train(whileTraining);
   });
 
-  savebtn = createButton('Save');
-  savebtn.class('btn-start');
-  savebtn.mousePressed(function() {
+  saveButton = createButton('Save');
+  saveButton.class('btn-start');
+  saveButton.mousePressed(function() {
     classifier.save();
   });
 

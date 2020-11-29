@@ -67,17 +67,96 @@
     font-weight: 500;
   }
 
-#body {			
-  background-color: #fbfbfb;
-  margin:0;
-  padding:0;
-  overflow: hidden;
-
-}
 canvas {
   margin:auto;
 }
 
 #container{
   padding-top: 20px;
+}
+
+/* index.html */
+
+
+.bodyNeutral{
+  color: white; 
+  margin:0;
+  padding:0;
+  overflow: hidden;
+
+}
+
+.bodyON{
+  color: #1F000A;
+
+}
+
+.bodyOFF{
+  color: #e3e2df;
+
+}
+
+.bodyWRONG{
+  color: #e3e2df;
+
+}
+
+
+
+.displayTextNeutral{
+  color: black; 
+  font-size: 80px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif;
+}
+
+.displayTextON{
+  color: black; 
+  font-size: 80px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif;
+}
+
+.displayTextOFF{
+  color: black; 
+  font-size: 80px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif;
+}
+
+.displayTextWRONG{
+  color: black; 
+  font-size: 80px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif;
+}
+
+
+
+.showAdviceNeutral{
+  color: black; 
+  font-size: 50px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif; 
+}
+
+.showAdviceON{
+  color: green;
+  font-size: 50px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif; 
+}
+
+.showAdviceOFF{
+  color: red;
+  font-size: 50px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif; 
+}
+
+.showAdviceWRONG{
+  color: yellow;
+  font-size: 50px; 
+  font-weight: bold; 
+  font-family:'DM Sans', sans-serif; 
 }
