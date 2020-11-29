@@ -47,20 +47,24 @@ function draw() {
   image(video, 0, 0, 600, 450);
   pop();  
 
-select('#display_text').html(label)
+select('#displayText').html(label)
+
 if(label == 'Mask On'){
-  select('#body').style('background-color','#1F000A');
-  select('#showAdvice').style('color','green');
+  select('#body').class('bodyON');
+  select('#showAdvice').class('showAdviceON');
+  select('#displayText').class('displayTextON');
 	select('#showAdvice').html("Mask ok")
 }
 else if(label == 'Mask Off'){
-  select('#body').style('background-color','#e3e2df')
-  select('#showAdvice').style('color','red');
+  select('#body').class('bodyOFF');
+  select('#showAdvice').class('showAdviceOFF');
+  select('#displayText').class('displayTextOFF');
 	select('#showAdvice').html("Please use Mask!!")
 }
 else if(label == 'Mask Wrong'){
-  select('#body').style('background-color','#e3e2df')
-  select('#showAdvice').style('color','yellow');
+  select('#body').class('bodyWrong');
+  select('#showAdvice').class('showAdviceWRONG');
+  select('#displayText').class('displayTextWRONG');
 	select('#showAdvice').html("Please adjust Your Mask")
 }
 }
