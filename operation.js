@@ -1,11 +1,19 @@
 let mobilenet;
 let classifier;
 let video;
-let label = 'Needs to be trained';
-let maskonbtn, maskoffbtn, trainbtn, savebtn;
+let label = 'Loading model';
+let maskonButton,maskoffButton;
+let saveButton; 
+let trainButton;
 
 function modelReady() {
   console.log('Model is ready!!!');
+  classifier.load('model.json', customModelReady);
+}
+
+function customModelReady() {
+  console.log('Custom Model is ready!!!');
+  label = 'model ready';
 }
 
 function videoReady() {
@@ -13,75 +21,49 @@ function videoReady() {
 }
 
 function setup() {
-  var cnv = createCanvas(600, 500);
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(x, y);
+  var canvas = createCanvas(600, 450);
+
+  savebtn = createButton('Start');
+  savebtn.class('btn-start');
+  savebtn.mousePressed(function() {
+    classifier.classify(gotResults);
+  });
+
+  canvas.parent('video_holder');
 
   video = createCapture(VIDEO);
   video.hide();
-  background(0);
 
+  background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   classifier = mobilenet.classification(video, videoReady);
-
-  maskonbtn = createButton('Mask On');
-  maskonbtn.class('btn-start');
-  maskonbtn.mousePressed(function() {
-    classifier.addImage('Mask On');
-  });
-  
-  maskoffButton = createButton('Mask Off');
-  maskoffButton.class('btn-start');
-  maskoffButton.mousePressed(function() {
-    classifier.addImage('Mask Off');
-  });
-
-
-  maskoffButton = createButton('Mask wrong');
-  maskoffButton.class('btn-start');
-  maskoffButton.mousePressed(function() {
-    classifier.addImage('Mask wrong');
-  });
-
-  trainbtn = createButton('Train');
-  trainbtn.class('btn-start');
-  trainbtn.mousePressed(function() {
-    classifier.train(whileTraining);
-  });
-
-  savebtn = createButton('Save');
-  savebtn.class('btn-start');
-  savebtn.mousePressed(function() {
-    classifier.save();
-  });
-
- }
-
-
+}
 
 function draw() {
   background(0);
   push();
   translate(width,0);
   scale(-1, 1);
-  image(video, 0, 0, 600, 460);
-  pop();
-  
-  fill(255);
-  textSize(16);
-  text(label, 10, height - 10);
-}
+  image(video, 0, 0, 600, 450);
+  pop();  
 
-function whileTraining(loss) {
-  if (loss == null) {
-    console.log('Training Complete');
-    classifier.classify(gotResults);
-  } else {
-    console.log(loss);
-  }
+select('#display_text').html(label)
+if(label == 'Mask On'){
+  select('#body').style('background-color','#1F000A');
+  select('#showAdvice').style('color','green');
+	select('#showAdvice').html("Mask ok")
 }
-
+else if(label == 'Mask Off'){
+  select('#body').style('background-color','#e3e2df')
+  select('#showAdvice').style('color','red');
+	select('#showAdvice').html("Please use Mask!!")
+}
+else if(label == 'Mask Wrong'){
+  select('#body').style('background-color','#e3e2df')
+  select('#showAdvice').style('color','yellow');
+	select('#showAdvice').html("Please adjust Your Mask")
+}
+}
 function gotResults(error, result) {
   if (error) {
     console.error(error);
