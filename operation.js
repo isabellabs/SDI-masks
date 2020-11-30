@@ -53,7 +53,8 @@ if(label == 'Mask On'){
   select('#body').class('mask-on-bg');
   select('#showAdvice').class('showAdviceON');
   select('#displayText').class('mask-on-title');
-  select('#showAdvice').html("YOUR MASK IS ON")
+  select('#showAdvice').html("YOUR MASK IS ON");
+  select('#video_holder').class('video-mask-on');
   select('#gif').html("<img src='Gifs/animation_500_ki4d2vec-min.gif' width='250px'>");
   var patch
         	$.get('pd_patch/TestFreq.pd', function(patchStr) {
@@ -66,6 +67,7 @@ else if(label == 'Mask Off'){
   select('#showAdvice').class('showAdviceOFF');
   select('#displayText').class('mask-off-title');
   select('#showAdvice').html("YOUR MASK IS OFF");
+  select('#video_holder').class('video-mask-off');
   select('#gif').html("<img src='Gifs/animation_500_ki4dqc5j-min.gif' width='250px'>");
   var patch
         	$.get('pd_patch/TestFreq.pd', function(patchStr) {
@@ -78,6 +80,7 @@ else if(label == 'Mask Wrong'){
   select('#showAdvice').class('showAdviceWRONG');
   select('#displayText').class('mask-wrong-title');
   select('#showAdvice').html("YOUR MASK IS WRONG");
+  select('#video_holder').class('video-mask-wrong');
   select('#gif').html("<img src='Gifs/animation_500_ki4iedyn.gif' width='250px'>");
   var patch
         	$.get('pd_patch/TestFreq.pd', function(patchStr) {

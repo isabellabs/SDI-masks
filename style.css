@@ -144,14 +144,22 @@ fieldset:disabled a.btn {
   line-height: 100%;
 }
 
-.video {
+.video-mask-on {
+  width:600px;
+  height: 450px;
   border: 12px solid #38D3EB;
-  width: 200px;
 }
 
-.gif {
-  height: 200px;
-  width: 200px;
+.video-mask-off {
+  width:600px;
+  height: 450px;
+  border: 12px solid #FF6496;
+}
+
+.video-mask-wrong {
+  width:600px;
+  height: 450px;
+  border: 12px solid #FEB547;
 }
 
 /* Paulo*/
