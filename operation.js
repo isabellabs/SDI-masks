@@ -10,7 +10,7 @@ let state = ''
 
 function modelReady() {
   console.log('Model is ready!!!');
-  classifier.load('model.json', customModelReady);
+  classifier.load('./model.json', customModelReady);
 }
 
 function customModelReady() {
@@ -41,7 +41,7 @@ function setup() {
   classifier = mobilenet.classification(video, videoReady);
 
   var patch
-  $.get('./pd_patch/main.pd', function (patchStr) {
+  $.get('./pd_patch/TestFreq.pd', function (patchStr) {
 
     patch = Pd.loadPatch(patchStr)
     Pd.send('freq', [parseFloat("0")])
