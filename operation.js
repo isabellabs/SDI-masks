@@ -54,7 +54,7 @@ if(label == 'Mask On'){
   select('#showAdvice').class('showAdviceON');
   select('#displayText').class('mask-on-title');
   select('#showAdvice').html("YOUR MASK IS ON")
-  select('#showAdvice').html("<img src='Gif/animation_500_ki4d2vec-min.gif'>");
+  select('#showAdvice').html("<img src='Gifs/animation_500_ki4d2vec-min.gif'>");
 }
 else if(label == 'Mask Off'){
   select('#body').class('mask-off-bg');
