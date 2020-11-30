@@ -54,7 +54,7 @@ if(label == 'Mask On'){
   select('#showAdvice').class('showAdviceON');
   select('#displayText').class('mask-on-title');
   select('#showAdvice').html("YOUR MASK IS ON")
-  select('#showAdvice').html("<lottie-player src='https://assets9.lottiefiles.com/packages/lf20_aibtg4s1.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop autoplay></lottie-player>");
+  select('#showAdvice').html("<img src='Gif/animation_500_ki4d2vec-min.gif'>");
 }
 else if(label == 'Mask Off'){
   select('#body').class('mask-off-bg');
@@ -68,7 +68,7 @@ else if(label == 'Mask Wrong'){
   select('#showAdvice').class('showAdviceWRONG');
   select('#displayText').class('mask-wrong-title');
   select('#showAdvice').html("YOUR MASK IS WRONG");
-  select('#showAdvice').html("<lottie-player src='https://assets5.lottiefiles.com/packages/lf20_d7zirht6.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop autoplay></lottie-player>");
+  select('#showAdvice').html("<img src='Gifs/animation_500_ki4d2vec-min.gif'>");
 }
 }
 function gotResults(error, result) {
