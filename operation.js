@@ -55,6 +55,11 @@ if(label == 'Mask On'){
   select('#displayText').class('mask-on-title');
   select('#showAdvice').html("YOUR MASK IS ON")
   select('#gif').html("<img src='Gifs/animation_500_ki4d2vec-min.gif'>");
+  var patch
+        	$.get('pd_patches/mask.pd', function(patchStr) {
+          	patch = Pd.loadPatch(patchStr)
+          	Pd.start()
+        	})
 }
 else if(label == 'Mask Off'){
   select('#body').class('mask-off-bg');
@@ -62,14 +67,23 @@ else if(label == 'Mask Off'){
   select('#displayText').class('mask-off-title');
   select('#showAdvice').html("YOUR MASK IS OFF");
   select('#gif').html("<img src='Gifs/animation_500_ki4dqc5j-min.gif'>");
+  var patch
+        	$.get('pd_patches/nomask.pd', function(patchStr) {
+          	patch = Pd.loadPatch(patchStr)
+          	Pd.start()
+        	})
 }
-
 else if(label == 'Mask Wrong'){
   select('#body').class('mask-wrong-bg');
   select('#showAdvice').class('showAdviceWRONG');
   select('#displayText').class('mask-wrong-title');
   select('#showAdvice').html("YOUR MASK IS WRONG");
   select('#gif').html("<img src='Gifs/animation_500_ki4dqc5j-min.gif'>");
+  var patch
+        	$.get('pd_patches/pure_pitch.pd', function(patchStr) {
+          	patch = Pd.loadPatch(patchStr)
+          	Pd.start()
+        	})
 }
 }
 function gotResults(error, result) {
