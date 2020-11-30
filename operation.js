@@ -85,7 +85,7 @@ function draw() {
 
     state = 'off'
     if (state != prevstate) {
-      Pd.send('freq', [parseFloat("45")])
+      Pd.send('freq', [parseFloat("0")])
 
       prevstate = state
     }
@@ -101,7 +101,7 @@ function draw() {
 
     state = 'wrong'
     if (state != prevstate) {
-      Pd.send('freq', [parseFloat("100")])
+      Pd.send('freq', [parseFloat("45")])
 
       prevstate = state
     }
