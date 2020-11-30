@@ -22,8 +22,8 @@ function setup() {
   video.hide();
   background(0);
 
-  mobilenet = ml5.featureExtractor('MobileNet', modelReady);
-  classifier = mobilenet.classification(video, videoReady);
+  mobilenet = ml5.featureExtractor('MobileNet', { numLabels: 3 }, modelReady);
+  classifier = mobilenet.classification(video, 3, videoReady);
 
   maskonbtn = createButton('Mask On');
   maskonbtn.class('btn-start');
@@ -57,14 +57,12 @@ function setup() {
 
  }
 
-
-
 function draw() {
   background(0);
   push();
   translate(width,0);
   scale(-1, 1);
-  image(video, 0, 0, 600, 460);
+  image(video, 0, 0, 600, 450);
   pop();
   
   fill(255);
