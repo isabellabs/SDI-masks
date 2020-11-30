@@ -160,28 +160,28 @@ fieldset:disabled a.btn {
 }
 
 .showAdviceNeutral{
-  color: black; 
+  color: var(--blue-gray); 
   font-size: 50px; 
   font-weight: bold; 
   font-family:'DM Sans', sans-serif; 
 }
 
 .showAdviceON{
-  color: green;
+  color: var(--mask);
   font-size: 50px; 
   font-weight: bold; 
   font-family:'DM Sans', sans-serif; 
 }
 
 .showAdviceOFF{
-  color: red;
+  color: var(--no-mask);
   font-size: 50px; 
   font-weight: bold; 
   font-family:'DM Sans', sans-serif; 
 }
 
 .showAdviceWRONG{
-  color: yellow;
+  color: var(--wrong-mask);
   font-size: 50px; 
   font-weight: bold; 
   font-family:'DM Sans', sans-serif; 
