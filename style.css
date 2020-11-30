@@ -65,7 +65,7 @@ margin-left: 20px;
   padding: 0.5rem 2rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 0.5rem;
+  border-radius: 6rem;
   margin: 20px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -197,21 +197,24 @@ fieldset:disabled a.btn {
 .video-mask-on {
   width:624px;
   height: 474px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  border-radius: 0.5rem;
   border: 12px solid #38D3EB;
 }
 
 .video-mask-off {
   width:624px;
   height: 474px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  border-radius: 0.5rem;
   border: 12px solid #FF6496;
 }
 
 .video-mask-wrong {
   width:624px;
   height: 474px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  border-radius: 0.5rem;
   border: 12px solid #FEB547;
 }
 
@@ -222,7 +225,7 @@ fieldset:disabled a.btn {
 }
 
 .mask-neutral-title {
-  color: var(--neutral-mask);
+  color: var(--blue-gray);
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: bold;
@@ -238,7 +241,7 @@ fieldset:disabled a.btn {
 }
 
 .showAdviceON{
-  color: var(--mask);
+  color: var(--blue-gray);
   font-size: 50px; 
   font-weight: bold; 
   font-family:'DM Sans', sans-serif; 
