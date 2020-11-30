@@ -70,7 +70,7 @@ else if(label == 'Mask Wrong'){
   select('#showAdvice').html("YOUR MASK IS WRONG");
   select('#showAdvice').html("<lottie-player src='https://assets5.lottiefiles.com/packages/lf20_d7zirht6.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop autoplay></lottie-player>");
 }
-
+}
 function gotResults(error, result) {
   if (error) {
     console.error(error);
