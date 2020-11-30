@@ -13,7 +13,7 @@ function modelReady() {
 
 function customModelReady() {
   console.log('Custom Model is ready!!!');
-  label = 'Model ready';
+  label = 'Model ready!';
 }
 
 function videoReady() {
@@ -57,7 +57,7 @@ if(label == 'Mask On'){
   select('#video_holder').class('video-mask-on');
   select('#gif').html("<img src='Gifs/animation_500_ki4d2vec-min.gif' width='250px'>");
   var patch
-        	$.get('pd_patch/TestFreq.pd', function(patchStr) {
+        	$.get('pd_patch/mask.pd', function(patchStr) {
           	patch = Pd.loadPatch(patchStr)
           	Pd.start()
         	})
@@ -70,7 +70,7 @@ else if(label == 'Mask Off'){
   select('#video_holder').class('video-mask-off');
   select('#gif').html("<img src='Gifs/animation_500_ki4dqc5j-min.gif' width='250px'>");
   var patch
-        	$.get('pd_patch/TestFreq.pd', function(patchStr) {
+        	$.get('pd_patch/nomask.pd', function(patchStr) {
           	patch = Pd.loadPatch(patchStr)
           	Pd.start()
         	})
@@ -83,7 +83,7 @@ else if(label == 'Mask Wrong'){
   select('#video_holder').class('video-mask-wrong');
   select('#gif').html("<img src='Gifs/animation_500_ki4iedyn.gif' width='250px'>");
   var patch
-        	$.get('pd_patch/TestFreq.pd', function(patchStr) {
+        	$.get('pd_patch/nomask.pd', function(patchStr) {
           	patch = Pd.loadPatch(patchStr)
           	Pd.start()
         	})
