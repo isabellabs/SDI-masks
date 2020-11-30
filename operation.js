@@ -50,22 +50,22 @@ function draw() {
 select('#displayText').html(label)
 
 if(label == 'Mask On'){
-  select('#body').class('bodyON');
+  select('#body').class('mask-on-bg');
   select('#showAdvice').class('showAdviceON');
-  select('#displayText').class('displayTextON');
-	select('#showAdvice').html("Mask ok")
+  select('#displayText').class('mask-on-title');
+	select('#showAdvice').html("YOUR MASK IS ON")
 }
 else if(label == 'Mask Off'){
-  select('#body').class('bodyOFF');
+  select('#body').class('mask-off-bg');
   select('#showAdvice').class('showAdviceOFF');
-  select('#displayText').class('displayTextOFF');
-	select('#showAdvice').html("Please use Mask!!")
+  select('#displayText').class('mask-off-title');
+	select('#showAdvice').html("YOUR MASK IS OFF")
 }
 else if(label == 'Mask Wrong'){
-  select('#body').class('bodyWrong');
+  select('#body').class('mask-wrong-bg');
   select('#showAdvice').class('showAdviceWRONG');
-  select('#displayText').class('displayTextWRONG');
-	select('#showAdvice').html("Please adjust Your Mask")
+  select('#displayText').class('mask-wrong-title');
+	select('#showAdvice').html("YOUR MASK IS WRONG")
 }
 }
 function gotResults(error, result) {
