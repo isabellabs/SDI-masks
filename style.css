@@ -149,8 +149,9 @@ fieldset:disabled a.btn {
   width: 200px;
 }
 
-.gif-position {
-
+.gif {
+  height: 200px;
+  width: 200px;
 }
 
 /* Paulo*/
