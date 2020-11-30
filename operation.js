@@ -13,7 +13,7 @@ function modelReady() {
 
 function customModelReady() {
   console.log('Custom Model is ready!!!');
-  label = 'model ready';
+  label = 'Model ready';
 }
 
 function videoReady() {
