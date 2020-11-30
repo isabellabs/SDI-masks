@@ -26,31 +26,31 @@ function setup() {
   classifier = mobilenet.classification(video, videoReady);
 
   maskonbtn = createButton('Mask On');
-  maskonbtn.class('btn-start');
+  maskonbtn.class('btn-train');
   maskonbtn.mousePressed(function() {
     classifier.addImage('Mask On');
   });
   
   maskoffButton = createButton('Mask Off');
-  maskoffButton.class('btn-start');
+  maskoffButton.class('btn-train');
   maskoffButton.mousePressed(function() {
     classifier.addImage('Mask Off');
   });
 
   maskWrongButton = createButton('Mask wrong');
-  maskWrongButton.class('btn-start');
+  maskWrongButton.class('btn-train');
   maskWrongButton.mousePressed(function() {
     classifier.addImage('Mask wrong');
   });
 
   trainButton = createButton('Train');
-  trainButton.class('btn-start');
+  trainButton.class('btn-train');
   trainButton.mousePressed(function() {
     classifier.train(whileTraining);
   });
 
   saveButton = createButton('Save');
-  saveButton.class('btn-start');
+  saveButton.class('btn-train');
   saveButton.mousePressed(function() {
     classifier.save();
   });
