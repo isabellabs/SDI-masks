@@ -144,8 +144,13 @@ fieldset:disabled a.btn {
   line-height: 100%;
 }
 
+.video {
+  border: 12px solid #38D3EB;
+  width: 200px;
+}
+
 .gif-position {
-  
+
 }
 
 /* Paulo*/
