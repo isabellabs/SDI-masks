@@ -61,6 +61,7 @@ else if(label == 'Mask Off'){
   select('#showAdvice').class('showAdviceOFF');
   select('#displayText').class('mask-off-title');
   select('#showAdvice').html("YOUR MASK IS OFF");
+  select('#showAdvice').html("<img src='Gifs/animation_500_ki4dqc5j-min.gif'>");
 }
 
 else if(label == 'Mask Wrong'){
@@ -68,7 +69,7 @@ else if(label == 'Mask Wrong'){
   select('#showAdvice').class('showAdviceWRONG');
   select('#displayText').class('mask-wrong-title');
   select('#showAdvice').html("YOUR MASK IS WRONG");
-  select('#showAdvice').html("<img src='Gifs/animation_500_ki4d2vec-min.gif'>");
+  select('#showAdvice').html("<img src='Gifs/animation_500_ki4dqc5j-min.gif'>");
 }
 }
 function gotResults(error, result) {
