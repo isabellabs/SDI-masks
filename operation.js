@@ -10,7 +10,7 @@ let state = ''
 
 function modelReady() {
   console.log('Model is ready!!!');
-  classifier.load('./model.json', customModelReady);
+  classifier.load('./SDIGR7_model.json', customModelReady);
 }
 
 function customModelReady() {
@@ -112,7 +112,11 @@ function gotResults(error, result) {
   if (error) {
     console.error(error);
   } else {
-    label = result[0].label;
+    if (result[0].label == 0) {
+      label = "Mask Off"
+    } else if ((result[0].label == 1)) { label = "Mask On" }
+    else { label = "Mask Wrong" }
+    //label = result[0].label;
     classifier.classify(gotResults);
   }
 }
