@@ -14,9 +14,11 @@ function videoReady() {
 
 function setup() {
   var cnv = createCanvas(600, 450);
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(x, y);
+  cnv.parent('video_holder');
+
+  // var x = (windowWidth - width) / 2;
+  // var y = (windowHeight - height) / 2;
+  // cnv.position(x, y);
 
   video = createCapture(VIDEO);
   video.hide();
