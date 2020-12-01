@@ -111,7 +111,7 @@ function draw() {
     select('#body').class('mask-neutral-bg');
     select('#showAdvice').class('showAdviceNeutral');
     select('#displayText').class('mask-neutral-title');
-    select('#showAdvice').html("YOUR MASK IS WRONG");
+    select('#showAdvice').html("");
     select('#video_holder').class('video-mask-neutral');
     select('#gif').html("<img src='Gifs/ZZZZZZZZZZZ.gif' width='250px'>");
 
