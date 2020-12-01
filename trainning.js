@@ -22,8 +22,8 @@ function setup() {
   video.hide();
   background(0);
 
-  mobilenet = ml5.featureExtractor('MobileNet', { numLabels: 3 }, modelReady);
-  classifier = mobilenet.classification(video, 3, videoReady);
+  mobilenet = ml5.featureExtractor('MobileNet', { numLabels: 4 }, modelReady);
+  classifier = mobilenet.classification(video, 4, videoReady);
 
   maskonbtn = createButton('Mask On');
   maskonbtn.class('btn-start');
@@ -41,6 +41,12 @@ function setup() {
   maskWrongButton.class('btn-start');
   maskWrongButton.mousePressed(function() {
     classifier.addImage('2');
+  });
+
+  neutralButton = createButton('Neutral');
+  neutralButton.class('btn-start');
+  neutralButton.mousePressed(function() {
+    classifier.addImage('3');
   });
 
   trainButton = createButton('Train');

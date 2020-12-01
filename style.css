@@ -218,6 +218,13 @@ fieldset:disabled a.btn {
   border: 12px solid #FEB547;
 }
 
+.video-mask-neutral {
+  width:624px;
+  height: 474px;
+  margin-bottom: 16px;
+  border-radius: 0.5rem;
+  border: 12px solid #f0ede8;
+}
 /* Paulo*/
 
 .mask-neutral-bg {

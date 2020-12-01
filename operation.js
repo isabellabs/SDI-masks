@@ -108,14 +108,14 @@ function draw() {
     else { }
   }
   else if (label == 'Neutral') {
-    select('#body').class('mask-wrong-bg');
-    select('#showAdvice').class('showAdviceWRONG');
-    select('#displayText').class('mask-wrong-title');
+    select('#body').class('mask-neutral-bg');
+    select('#showAdvice').class('showAdviceNeutral');
+    select('#displayText').class('mask-neutral-title');
     select('#showAdvice').html("YOUR MASK IS WRONG");
-    select('#video_holder').class('video-mask-wrong');
-    select('#gif').html("<img src='Gifs/animation_500_ki4iedyn.gif' width='250px'>");
+    select('#video_holder').class('video-mask-neutral');
+    select('#gif').html("<img src='Gifs/ZZZZZZZZZZZ.gif' width='250px'>");
 
-    state = 'wrong'
+    state = 'neutral'
     if (state != prevstate) {
       Pd.send('freq', [parseFloat("0")])
 
