@@ -113,7 +113,7 @@ function draw() {
     select('#displayText').class('mask-neutral-title');
     select('#showAdvice').html("");
     select('#video_holder').class('video-mask-neutral');
-    select('#gif').html("<img src='Gifs/ZZZZZZZZZZZ.gif' width='250px'>");
+    select('#gif').html("<img src='Gifs/logo_2.png' width='360px'>");
 
     state = 'neutral'
     if (state != prevstate) {
