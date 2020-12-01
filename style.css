@@ -248,7 +248,7 @@ fieldset:disabled a.btn {
 }
 
 .showAdviceON{
-  color: var(--blue-gray);
+  color: var(--mask);
   font-size: 50px; 
   font-weight: bold; 
   font-family:'DM Sans', sans-serif; 
