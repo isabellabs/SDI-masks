@@ -85,7 +85,7 @@ function draw() {
 
     state = 'off'
     if (state != prevstate) {
-      Pd.send('freq', [parseFloat("0")])
+      Pd.send('freq', [parseFloat("45")])
 
       prevstate = state
     }
@@ -101,7 +101,23 @@ function draw() {
 
     state = 'wrong'
     if (state != prevstate) {
-      Pd.send('freq', [parseFloat("45")])
+      Pd.send('freq', [parseFloat("200")])
+
+      prevstate = state
+    }
+    else { }
+  }
+  else if (label == 'Neutral') {
+    select('#body').class('mask-wrong-bg');
+    select('#showAdvice').class('showAdviceWRONG');
+    select('#displayText').class('mask-wrong-title');
+    select('#showAdvice').html("YOUR MASK IS WRONG");
+    select('#video_holder').class('video-mask-wrong');
+    select('#gif').html("<img src='Gifs/animation_500_ki4iedyn.gif' width='250px'>");
+
+    state = 'wrong'
+    if (state != prevstate) {
+      Pd.send('freq', [parseFloat("0")])
 
       prevstate = state
     }
@@ -115,7 +131,8 @@ function gotResults(error, result) {
     if (result[0].label == 0) {
       label = "Mask Off"
     } else if ((result[0].label == 1)) { label = "Mask On" }
-    else { label = "Mask Wrong" }
+    else if ((result[0].label == 2)) { label = "Mask Wrong" }
+    else { label = "Neutral" }
     //label = result[0].label;
     classifier.classify(gotResults);
   }
